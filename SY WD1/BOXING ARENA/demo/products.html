@@ -1,0 +1,1011 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products - BoxingPro</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+
+            <i class="fa-solid fa-hand-fist text-danger"></i>
+
+            Boxing<span class="text-danger">Pro</span>
+
+        </a>
+
+
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link active" href="products.html">
+                        Products
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="product-details.html">
+                        Product Details
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="contact.html">
+                        Contact
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-3">
+
+                    <a class="btn btn-danger position-relative"
+                        href="cart.html">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Cart
+
+                        <span id="cartCount"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">
+
+                            0
+
+                        </span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="page-header">
+
+    <div class="container text-center text-white">
+
+        <h1>Boxing Equipment Collection</h1>
+
+        <p>
+            Premium gear for every fighter
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRODUCTS SECTION ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+
+        <!-- SEARCH AND SORT -->
+
+        <div class="row g-3 mb-4">
+
+
+            <!-- SEARCH -->
+
+            <div class="col-md-6">
+
+                <div class="input-group">
+
+                    <span class="input-group-text">
+
+                        <i class="fa-solid fa-search"></i>
+
+                    </span>
+
+
+                    <input type="text"
+                        id="searchInput"
+                        class="form-control"
+                        placeholder="Search boxing products...">
+
+                </div>
+
+            </div>
+
+
+            <!-- SORT -->
+
+            <div class="col-md-6">
+
+                <select id="sortSelect"
+                    class="form-select">
+
+                    <option value="default">
+                        Sort Products
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="name">
+                        Name: A to Z
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CATEGORY FILTER -->
+
+        <div class="category-filter text-center mb-5">
+
+            <button class="btn btn-danger filter-btn active"
+                data-category="All">
+
+                All
+
+            </button>
+
+
+            <button class="btn btn-outline-dark filter-btn"
+                data-category="Gloves">
+
+                Boxing Gloves
+
+            </button>
+
+
+            <button class="btn btn-outline-dark filter-btn"
+                data-category="Punching Bags">
+
+                Punching Bags
+
+            </button>
+
+
+            <button class="btn btn-outline-dark filter-btn"
+                data-category="Shoes">
+
+                Boxing Shoes
+
+            </button>
+
+
+            <button class="btn btn-outline-dark filter-btn"
+                data-category="Protective Gear">
+
+                Protective Gear
+
+            </button>
+
+
+            <button class="btn btn-outline-dark filter-btn"
+                data-category="Accessories">
+
+                Accessories
+
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCTS -->
+
+        <div class="row g-4"
+            id="productContainer">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Gloves"
+                data-name="Professional Boxing Gloves"
+                data-price="1499">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        20% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80"
+                        alt="Professional Boxing Gloves">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Boxing Gloves
+                        </small>
+
+                        <h5>
+                            Professional Boxing Gloves
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <h5 class="price">
+                            ₹1,499
+                            <del>₹1,899</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Professional Boxing Gloves',1499)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Gloves"
+                data-name="Training Boxing Gloves"
+                data-price="999">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        15% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?auto=format&fit=crop&w=800&q=80"
+                        alt="Training Boxing Gloves">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Boxing Gloves
+                        </small>
+
+                        <h5>
+                            Training Boxing Gloves
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <h5 class="price">
+                            ₹999
+                            <del>₹1,299</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Training Boxing Gloves',999)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Punching Bags"
+                data-name="Heavy Duty Punching Bag"
+                data-price="3999">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        15% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1584735175097-719d848f8449?auto=format&fit=crop&w=800&q=80"
+                        alt="Punching Bag">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Punching Bags
+                        </small>
+
+                        <h5>
+                            Heavy Duty Punching Bag
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <h5 class="price">
+                            ₹3,999
+                            <del>₹4,699</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Heavy Duty Punching Bag',3999)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Punching Bags"
+                data-name="Speed Punching Bag"
+                data-price="2299">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        10% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80"
+                        alt="Speed Bag">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Punching Bags
+                        </small>
+
+                        <h5>
+                            Speed Punching Bag
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <h5 class="price">
+                            ₹2,299
+                            <del>₹2,599</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Speed Punching Bag',2299)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Shoes"
+                data-name="Professional Boxing Shoes"
+                data-price="2499">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        25% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=800&q=80"
+                        alt="Boxing Shoes">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Boxing Shoes
+                        </small>
+
+                        <h5>
+                            Professional Boxing Shoes
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <h5 class="price">
+                            ₹2,499
+                            <del>₹3,299</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Professional Boxing Shoes',2499)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Protective Gear"
+                data-name="Boxing Head Guard"
+                data-price="1199">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        18% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80"
+                        alt="Boxing Head Guard">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Protective Gear
+                        </small>
+
+                        <h5>
+                            Professional Boxing Head Guard
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <h5 class="price">
+                            ₹1,199
+                            <del>₹1,499</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Boxing Head Guard',1199)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 7 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Accessories"
+                data-name="Boxing Hand Wraps"
+                data-price="399">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        20% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=800&q=80"
+                        alt="Boxing Hand Wraps">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Accessories
+                        </small>
+
+                        <h5>
+                            Premium Boxing Hand Wraps
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <h5 class="price">
+                            ₹399
+                            <del>₹499</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Premium Boxing Hand Wraps',399)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 8 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Protective Gear"
+                data-name="Boxing Mouth Guard"
+                data-price="299">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        12% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80"
+                        alt="Mouth Guard">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Protective Gear
+                        </small>
+
+                        <h5>
+                            Professional Boxing Mouth Guard
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <h5 class="price">
+                            ₹299
+                            <del>₹349</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Professional Boxing Mouth Guard',299)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 9 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Protective Gear"
+                data-name="Boxing Shin Guards"
+                data-price="899">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        15% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=800&q=80"
+                        alt="Shin Guards">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Protective Gear
+                        </small>
+
+                        <h5>
+                            Professional Boxing Shin Guards
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <h5 class="price">
+                            ₹899
+                            <del>₹1,099</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Professional Boxing Shin Guards',899)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 10 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Accessories"
+                data-name="Boxing Training Shorts"
+                data-price="699">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        20% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80"
+                        alt="Boxing Shorts">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Accessories
+                        </small>
+
+                        <h5>
+                            Boxing Training Shorts
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <h5 class="price">
+                            ₹699
+                            <del>₹899</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Boxing Training Shorts',699)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 11 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Accessories"
+                data-name="Boxing Jump Rope"
+                data-price="349">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        10% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=800&q=80"
+                        alt="Jump Rope">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Accessories
+                        </small>
+
+                        <h5>
+                            Professional Boxing Jump Rope
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <h5 class="price">
+                            ₹349
+                            <del>₹399</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Professional Boxing Jump Rope',349)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 12 -->
+
+            <div class="col-md-6 col-lg-4 product-item"
+                data-category="Protective Gear"
+                data-name="Boxing Protective Cup"
+                data-price="599">
+
+                <div class="product-card">
+
+                    <div class="discount-badge">
+                        15% OFF
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80"
+                        alt="Protective Cup">
+
+                    <div class="product-info">
+
+                        <small class="text-muted">
+                            Protective Gear
+                        </small>
+
+                        <h5>
+                            Boxing Protective Cup
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <h5 class="price">
+                            ₹599
+                            <del>₹699</del>
+                        </h5>
+
+                        <button class="btn btn-danger w-100"
+                            onclick="addToCart('Boxing Protective Cup',599)">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- NO PRODUCTS MESSAGE -->
+
+        <div id="noProducts"
+            class="text-center py-5 d-none">
+
+            <i class="fa-solid fa-box-open fa-3x text-danger mb-3"></i>
+
+            <h4>
+                No Products Found
+            </h4>
+
+            <p>
+                Try another search or category.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer bg-dark text-white pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <h4>
+                    Boxing<span class="text-danger">Pro</span>
+                </h4>
+
+                <p>
+                    Your trusted online store for premium boxing equipment.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <h5>
+                    Quick Links
+                </h5>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">Products</a>
+                    </li>
+
+                    <li>
+                        <a href="cart.html">Cart</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <h5>
+                    Follow Us
+                </h5>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="text-center">
+
+            <p class="mb-0">
+                © 2026 BoxingPro. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JS -->
+
+<script src="scrpit.js"></script>
+
+
+</body>
+
+</html>

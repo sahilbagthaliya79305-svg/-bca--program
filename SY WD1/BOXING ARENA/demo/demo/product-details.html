@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details - BoxingPro</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+
+            <i class="fa-solid fa-hand-fist text-danger"></i>
+
+            Boxing<span class="text-danger">Pro</span>
+
+        </a>
+
+
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="products.html">
+                        Products
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link active" href="product-details.html">
+                        Product Details
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="contact.html">
+                        Contact
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-3">
+
+                    <a class="btn btn-danger position-relative"
+                        href="cart.html">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Cart
+
+                        <span id="cartCount"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">
+
+                            0
+
+                        </span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= BREADCRUMB ================= -->
+
+<section class="breadcrumb-section">
+
+    <div class="container">
+
+        <nav aria-label="breadcrumb">
+
+            <ol class="breadcrumb mb-0">
+
+                <li class="breadcrumb-item">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                </li>
+
+                <li class="breadcrumb-item">
+
+                    <a href="products.html">
+                        Products
+                    </a>
+
+                </li>
+
+                <li class="breadcrumb-item active">
+
+                    Boxing Gloves
+
+                </li>
+
+            </ol>
+
+        </nav>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRODUCT DETAILS ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- ================= IMAGE GALLERY ================= -->
+
+            <div class="col-lg-6">
+
+                <div class="main-product-image mb-3">
+
+                    <img id="mainProductImage"
+
+                        src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1000&q=80"
+
+                        alt="Professional Boxing Gloves">
+
+                </div>
+
+
+                <div class="thumbnail-container">
+
+
+                    <img class="product-thumbnail active-thumbnail"
+
+                        src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1000&q=80"
+
+                        onclick="changeProductImage(this.src)">
+
+
+                    <img class="product-thumbnail"
+
+                        src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?auto=format&fit=crop&w=1000&q=80"
+
+                        onclick="changeProductImage(this.src)">
+
+
+                    <img class="product-thumbnail"
+
+                        src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1000&q=80"
+
+                        onclick="changeProductImage(this.src)">
+
+
+                    <img class="product-thumbnail"
+
+                        src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=1000&q=80"
+
+                        onclick="changeProductImage(this.src)">
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PRODUCT INFORMATION ================= -->
+
+            <div class="col-lg-6">
+
+                <span class="badge bg-danger mb-3">
+                    BEST SELLER
+                </span>
+
+
+                <h1 class="product-detail-title">
+
+                    Professional Boxing Gloves
+
+                </h1>
+
+
+                <div class="product-rating mb-3">
+
+                    <span class="text-warning">
+                        ★★★★★
+                    </span>
+
+                    <span class="text-muted ms-2">
+                        4.8 (125 Reviews)
+                    </span>
+
+                </div>
+
+
+                <div class="product-detail-price mb-3">
+
+                    ₹1,499
+
+                    <del>
+                        ₹1,899
+                    </del>
+
+                    <span class="discount-text">
+                        20% OFF
+                    </span>
+
+                </div>
+
+
+                <p class="product-description">
+
+                    Train like a professional with our premium
+                    Professional Boxing Gloves. These gloves are
+                    designed for maximum comfort, protection and
+                    performance during boxing training and matches.
+
+                </p>
+
+
+                <hr>
+
+
+                <!-- SIZE -->
+
+                <div class="mb-4">
+
+                    <h6>
+                        Select Size:
+                    </h6>
+
+
+                    <div class="size-options">
+
+                        <button class="size-btn">
+                            8 OZ
+                        </button>
+
+                        <button class="size-btn active-size">
+                            10 OZ
+                        </button>
+
+                        <button class="size-btn">
+                            12 OZ
+                        </button>
+
+                        <button class="size-btn">
+                            14 OZ
+                        </button>
+
+                        <button class="size-btn">
+                            16 OZ
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COLOR -->
+
+                <div class="mb-4">
+
+                    <h6>
+                        Select Color:
+                    </h6>
+
+
+                    <div class="color-options">
+
+                        <button class="color-btn black-color">
+
+                        </button>
+
+                        <button class="color-btn red-color">
+
+                        </button>
+
+                        <button class="color-btn blue-color">
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUANTITY -->
+
+                <div class="mb-4">
+
+                    <h6>
+                        Quantity:
+                    </h6>
+
+
+                    <div class="quantity-box">
+
+                        <button onclick="decreaseQuantity()">
+
+                            <i class="fa-solid fa-minus"></i>
+
+                        </button>
+
+
+                        <span id="productQuantity">
+                            1
+                        </span>
+
+
+                        <button onclick="increaseQuantity()">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+
+                        <button class="btn btn-danger btn-lg w-100"
+                            onclick="addProductToCart()">
+
+                            <i class="fa-solid fa-cart-plus"></i>
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <button class="btn btn-dark btn-lg w-100"
+                            onclick="buyNow()">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                            Buy Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DELIVERY INFORMATION -->
+
+                <div class="delivery-info mt-4">
+
+                    <div>
+
+                        <i class="fa-solid fa-truck text-danger"></i>
+
+                        Free Delivery Available
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-rotate-left text-danger"></i>
+
+                        7 Days Easy Return
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-shield-halved text-danger"></i>
+
+                        Secure Payment
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRODUCT INFORMATION TABS ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <ul class="nav nav-tabs"
+            id="productTabs">
+
+            <li class="nav-item">
+
+                <button class="nav-link active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#description">
+
+                    Description
+
+                </button>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <button class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#specifications">
+
+                    Specifications
+
+                </button>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <button class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#reviews">
+
+                    Reviews
+
+                </button>
+
+            </li>
+
+        </ul>
+
+
+        <div class="tab-content bg-white p-4">
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="tab-pane fade show active"
+                id="description">
+
+                <h4>
+                    Product Description
+                </h4>
+
+                <p>
+
+                    Professional Boxing Gloves are designed
+                    for athletes who want comfort, durability
+                    and maximum hand protection.
+
+                </p>
+
+                <p>
+
+                    The gloves are suitable for training,
+                    sparring, boxing practice and professional
+                    workouts.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SPECIFICATIONS -->
+
+            <div class="tab-pane fade"
+                id="specifications">
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered">
+
+                        <tr>
+
+                            <th>
+                                Product Type
+                            </th>
+
+                            <td>
+                                Boxing Gloves
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th>
+                                Material
+                            </th>
+
+                            <td>
+                                Premium Synthetic Leather
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th>
+                                Available Sizes
+                            </th>
+
+                            <td>
+                                8 OZ, 10 OZ, 12 OZ, 14 OZ, 16 OZ
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th>
+                                Suitable For
+                            </th>
+
+                            <td>
+                                Training, Sparring & Boxing
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th>
+                                Warranty
+                            </th>
+
+                            <td>
+                                6 Months
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REVIEWS -->
+
+            <div class="tab-pane fade"
+                id="reviews">
+
+                <div class="review-box">
+
+                    <h5>
+                        Rahul Sharma
+                    </h5>
+
+                    <div class="text-warning">
+                        ★★★★★
+                    </div>
+
+                    <p>
+
+                        Very comfortable gloves.
+                        Excellent quality for training.
+
+                    </p>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="review-box">
+
+                    <h5>
+                        Amit Patel
+                    </h5>
+
+                    <div class="text-warning">
+                        ★★★★☆
+                    </div>
+
+                    <p>
+
+                        Good quality and fast delivery.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RELATED PRODUCTS ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Related Products
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- RELATED PRODUCT 1 -->
+
+            <div class="col-md-4">
+
+                <div class="product-card">
+
+                    <img src="https://images.unsplash.com/photo-1584735175097-719d848f8449?auto=format&fit=crop&w=800&q=80"
+                        alt="Punching Bag">
+
+
+                    <div class="product-info">
+
+                        <h5>
+                            Heavy Punching Bag
+                        </h5>
+
+                        <h5 class="price">
+                            ₹3,999
+                        </h5>
+
+                        <a href="products.html"
+                            class="btn btn-danger w-100">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RELATED PRODUCT 2 -->
+
+            <div class="col-md-4">
+
+                <div class="product-card">
+
+                    <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=800&q=80"
+                        alt="Boxing Shoes">
+
+
+                    <div class="product-info">
+
+                        <h5>
+                            Professional Boxing Shoes
+                        </h5>
+
+                        <h5 class="price">
+                            ₹2,499
+                        </h5>
+
+                        <a href="products.html"
+                            class="btn btn-danger w-100">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RELATED PRODUCT 3 -->
+
+            <div class="col-md-4">
+
+                <div class="product-card">
+
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80"
+                        alt="Head Guard">
+
+
+                    <div class="product-info">
+
+                        <h5>
+                            Boxing Head Guard
+                        </h5>
+
+                        <h5 class="price">
+                            ₹1,199
+                        </h5>
+
+                        <a href="products.html"
+                            class="btn btn-danger w-100">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer bg-dark text-white pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <h4>
+                    Boxing<span class="text-danger">Pro</span>
+                </h4>
+
+                <p>
+                    Your trusted online store for premium boxing equipment.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <h5>
+                    Quick Links
+                </h5>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cart.html">
+                            Cart
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <h5>
+                    Follow Us
+                </h5>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="text-center">
+
+            <p class="mb-0">
+
+                © 2026 BoxingPro. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JS -->
+
+<script src="scrpit.js"></script>
+
+
+</body>
+
+</html>

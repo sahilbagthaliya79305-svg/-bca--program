@@ -1,0 +1,37 @@
+ create table emp-705(eid,ename);
+ create table emp values (1,ishita);
+ select*from emp9;
+.mode box
+select*from emp9;
++--------------+
+ create table ex1(dt);
+sqlite> insert into ex1 values(1),(11.222),(a'bcds),('tushar'),('12/ishita apt');
+ select*from ex1;
+ create table p1(dt);
+sqlite> insert into p1 values(1),(11.222),(a'bcds),('tushar'),('12/ishita apt');
+ insert into p1 values(1),(11.222),('tushar'),('12/ishita apt');
+sqlite> select*from p1;
+1
+11.222
+tushar
+12/ishita apt
+sqlite> .mode box
+sqlite> select*from p1;
++---------------+
+¦      dt       ¦
++---------------¦
+¦ 1             ¦
+¦ 11.222        ¦
+¦ tushar        ¦
+¦ 12/ishita apt ¦
++---------------+
+sqlite> .mode csv
+sqlite> select*from p1;
+1
+11.222
+tushar
+"12/ishita apt"
+sqlite> .schema p1
+CREATE TABLE p1(dt);
+sqlite>
+

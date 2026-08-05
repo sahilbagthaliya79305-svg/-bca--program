@@ -1,0 +1,175 @@
+sqlite> .open sales
+ create table  salesman(sid primary key,name,city,commission); 
+
+
+ insert into salesman values(701,'mohan patel','anand','0.15');
+  insert into salesman values(702,'nil shah','surat','0.13');
+  insert into salesman values(703,'preet vyas','ahmedabad','0.11');
+  insert into salesman values(704,'jeevan mehta','navsari','0.14');
+  insert into salesman values(705,'paul adam','nadiad','0.12');
+  insert into salesman values(706,'ramesh patel','surat','0.13');
+
+
+
+2
+
+
+
+create table order1(oid,pur_amt,ord_date,sid);
+
+
+insert into order1 values(1,12000,'2019-12-06',701);
+insert into order1 values(2,28000,'2020-1-07',702);
+insert into order1 values(3,25000,'2021-2-08',703);
+insert into order1 values(4,21000,'2022-3-09',704);
+insert into order1 values(5,26000,'2023-4-010',705);
+insert into order1 values(6,10000,'2024-5-11',706);
+insert into order1 values(7,19000,'2025-6-12',707);
+insert into order1 values(8,17000,'2026-7-13',708);
+insert into order1 values(9,16000,'2027-8-14',709);
+insert into order1 values(10,15000,'2028-9-15',710);
+
+
+
+3
+
+
+
+ create table customer1(cid,cust_name,grade,sid);
+
+
+insert into customer1 values('c1','mohit patel',100,701);
+insert into customer1 values('c2','jay shah',200,702);
+insert into customer1 values('c3','janak makwana',300,703);
+insert into customer1 values('c4','uttam sonariya',300,704);
+insert into customer1 values('c5','bhargav dangodara',200,705);
+insert into customer1 values('c6','bhavik sakariya',300,706);
+insert into customer1 values('c7','piyush vala',200,707);
+insert into customer1 values('c8','sanjay mehta',100,708);
+
+
+
+select*from salesman;
+.mode box
+.mode column
+select*from customer1;
+.mode csv
+select*from order1;
+
+output
+
+sqlite> .open sales
+sqlite> cretae table salesman(sid primary key,name,city,commission);
+
+ create table  salesman(sid primary key,name,city,commission);
+ insert into salesman values(701,'mohan patel','anand','0.15');
+  insert into salesman values(702,'nil shah','surat','0.13');
+  insert into salesman values(703,'preet vyas','ahmedabad','0.11');
+  insert into salesman values(704,'jeevan mehta','navsari','0.14');
+  insert into salesman values(705,'paul adam','nadiad','0.12');
+  insert into salesman values(706,'ramesh patel','surat','0.13');
+
+2
+
+sqlite> create table order1(oid,pur_amt,ord_date,sid);
+sqlite> insert into order1 values(1,12000,'2020-12-05',701);
+sqlite> insert into order1 values(2,28000,'2020-1-07',702);
+sqlite> insert into order1 values(3,25000,'2021-2-08',703);
+sqlite> insert into order1 values(4,21000,'2022-3-09',704);
+sqlite> insert into order1 values(5,26000,'2023-4-010',705);
+sqlite> insert into order1 values(6,10000,'2024-5-11',706);
+sqlite> insert into order1 values(7,19000,'2025-6-12',707);
+sqlite> insert into order1 values(8,17000,'2026-7-13',708);
+sqlite> insert into order1 values(9,16000,'2027-8-14',709);
+sqlite> insert into order1 values(10,15000,'2028-9-15',710);
+
+
+sqlite>  create table customer2(cid,cust_name,grade,sid);
+
+ insert into customer2 values('c1','mohit patel',100,701);
+ insert into customer2 values('c2','jay shah',200,702); 
+ insert into customer2 values('c3','janak makwana',300,703);
+ insert into customer2 values('c4','uttam sonariya',300,704);
+ insert into customer2 values('c5','bhargav dangodara',200,705);
+ insert into customer2 values('c6','bhavik sakariya',300,706);
+ insert into customer2 values('c7','piyush vala',200,707);
+ insert into customer2 values('c8','sanjay mehta',100,708);
+
+
+sqlite> select*from salesman;
+
+
+701|mohan patel|anand|0.15
+702|nil shah|surat|0.13
+703|preet vyas|ahmedabad|0.11
+704|jeevan mehta|navsari|0.14
+705|paul adam|nadiad|0.12
+706|ramesh patel|surat|0.13
+sqlite> .mode box
+sqlite> select*from salesman;
++---------------------------------------------+
+¦ sid ¦     name     ¦   city    ¦ commission ¦
++-----+--------------+-----------+------------¦
+¦ 701 ¦ mohan patel  ¦ anand     ¦ 0.15       ¦
+¦ 702 ¦ nil shah     ¦ surat     ¦ 0.13       ¦
+¦ 703 ¦ preet vyas   ¦ ahmedabad ¦ 0.11       ¦
+¦ 704 ¦ jeevan mehta ¦ navsari   ¦ 0.14       ¦
+¦ 705 ¦ paul adam    ¦ nadiad    ¦ 0.12       ¦
+¦ 706 ¦ ramesh patel ¦ surat     ¦ 0.13       ¦
++---------------------------------------------+
+sqlite> .mode box
+sqlite> .mode column
+sqlite> select*from customer;
+sqlite> .mode csv
+sqlite> select*from order1;
+oid,pur_amt,ord_date,sid
+1,12000,2020-12-05,701
+2,28000,2020-1-07,702
+3,25000,2021-2-08,703
+4,21000,2022-3-09,704
+5,26000,2023-4-010,705
+6,10000,2024-5-11,706
+7,19000,2025-6-12,707
+8,17000,2026-7-13,708
+9,16000,2027-8-14,709
+10,15000,2028-9-15,710
+sqlite> .mode column
+sqlite> select*from customer1;
+cid  cust_name          grade  sid
+---  -----------------  -----  ---
+c1   mohit patel        100    701
+c2   jay shah           200    702
+c3   janak makwana      300    703
+c4   uttam sonariya     300    704
+c5   bhargav dangodara  200    705
+c6   bhavik sakariya    300    706
+c7   piyush vala        200    707
+c8   sanjay mehta       100    708
+sqlite>
+
+
+4
+
+4.1 
+begin;
+insert into customer2 values ('c9','Pallavi limbani',450,709);
+insert into customer2 values ('c10','janki patel',400,710);
+rollback;
+
+
+4.2 begin;
+	delete from order1 where oid<2;
+	rollback;
+
+
+
+
+
+
+
+
+
+
+
+
+
